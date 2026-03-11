@@ -1,6 +1,6 @@
 # scriptify
 
-A Claude Code plugin that turns LLM instructions (skills, plugins, prompts) into standalone, deterministic scripts — more reliable than agent calls, with no token cost and faster execution.
+A plugin that turns LLM instructions (skills, plugins, prompts) into standalone, deterministic scripts — more reliable than agent calls, with no token cost and faster execution.
 
 ## Skills
 
