@@ -30,7 +30,7 @@ claude --plugin-dir /path/to/scriptify
 
 # Verify generated scripts
 /scriptify:verify all
-/scriptify:verify .scriptify/scripts/foo.sh
+/scriptify:verify scripts/foo.sh
 
 # Run self-test
 /scriptify:self_test
@@ -44,4 +44,4 @@ claude --plugin-dir /path/to/scriptify
 
 3. **Verify** validates generated scripts through static analysis (syntax, permissions, dependencies, safety) and behavioural comparison against the original instructions.
 
-All artifacts are stored in `.scriptify/` within the project.
+Generated scripts are stored in `scripts/`. Audit and verify reports are written to `$TMPDIR/scriptify/` and are not committed.

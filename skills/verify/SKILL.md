@@ -12,10 +12,10 @@ $ARGUMENTS
 
 The user can invoke this in several ways:
 
-1. **Verify a specific script** — e.g. `/scriptify:verify .scriptify/scripts/foo.sh`
+1. **Verify a specific script** — e.g. `/scriptify:verify scripts/foo.sh`
 2. **Verify all generated scripts** — e.g. `/scriptify:verify all`
    - Reads `${TMPDIR:-/tmp}/scriptify/audit-report.json` and verifies every script that was generated
-3. **Verify with source comparison** — e.g. `/scriptify:verify .scriptify/scripts/foo.sh against skills/foo/SKILL.md`
+3. **Verify with source comparison** — e.g. `/scriptify:verify scripts/foo.sh against skills/foo/SKILL.md`
 
 ## Verification steps
 
