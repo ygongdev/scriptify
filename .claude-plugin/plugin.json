@@ -1,0 +1,8 @@
+{
+  "name": "scriptify",
+  "description": "Turn LLM instructions (skills, plugins, prompts) into standalone, deterministic scripts — more reliable than agent calls, with no token cost and faster execution.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yicheng Gong"
+  }
+}
