@@ -13,7 +13,7 @@ $ARGUMENTS
 The user can invoke this skill in several ways:
 
 1. **From audit report** — e.g. `/scriptify:generate item 3` or `/scriptify:generate items 1,3,5`
-   - Read `.scriptify/audit-report.json` and generate scripts for the specified item(s)
+   - Read `${TMPDIR:-/tmp}/scriptify/audit-report.json` and generate scripts for the specified item(s)
    - If no item number is given, generate for ALL scriptifiable items
 
 2. **From natural language** — e.g. `/scriptify:generate a script that lints markdown files and fixes heading levels`
@@ -34,7 +34,7 @@ The user can invoke this skill in several ways:
 
 ## Output
 
-- Write each generated script to `.scriptify/scripts/<name>.<ext>`
+- Write each generated script to `scripts/<name>.<ext>` in the project root
 - Create the directory if it doesn't exist
 - Print a summary of what was generated:
 
@@ -43,10 +43,10 @@ The user can invoke this skill in several ways:
 
 | # | Source | Script | Language | Lines |
 |---|--------|--------|----------|-------|
-| 1 | skills/foo/SKILL.md | .scriptify/scripts/foo.sh | bash | 42 |
+| 1 | skills/foo/SKILL.md | scripts/foo.sh | bash | 42 |
 
-Scripts written to .scriptify/scripts/
+Scripts written to scripts/
 Run `/scriptify:verify` to validate them against the originals.
 ```
 
-- If generating from an audit item, update `.scriptify/audit-report.json` to record the generated script path for each item
+- If generating from an audit item, update `${TMPDIR:-/tmp}/scriptify/audit-report.json` to record the generated script path for each item

@@ -55,7 +55,7 @@ Present the audit as a structured report:
 <Prioritised list of items to scriptify first, ordered by savings/complexity ratio>
 ```
 
-After displaying the report, save a machine-readable JSON version to `.scriptify/audit-report.json` so that `/scriptify:generate` can consume it. Create the `.scriptify/` directory if it doesn't exist.
+After displaying the report, save a machine-readable JSON version to `${TMPDIR:-/tmp}/scriptify/audit-report.json` so that `/scriptify:generate` can consume it. Create the directory if it doesn't exist.
 
 The JSON format should be:
 ```json

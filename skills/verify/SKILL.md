@@ -14,7 +14,7 @@ The user can invoke this in several ways:
 
 1. **Verify a specific script** — e.g. `/scriptify:verify .scriptify/scripts/foo.sh`
 2. **Verify all generated scripts** — e.g. `/scriptify:verify all`
-   - Reads `.scriptify/audit-report.json` and verifies every script that was generated
+   - Reads `${TMPDIR:-/tmp}/scriptify/audit-report.json` and verifies every script that was generated
 3. **Verify with source comparison** — e.g. `/scriptify:verify .scriptify/scripts/foo.sh against skills/foo/SKILL.md`
 
 ## Verification steps
@@ -65,7 +65,7 @@ Present results as:
 - Failed: <N>
 ```
 
-Save the verification results to `.scriptify/verify-report.json` with this structure:
+Save the verification results to `${TMPDIR:-/tmp}/scriptify/verify-report.json` with this structure:
 ```json
 {
   "timestamp": "<ISO 8601>",
