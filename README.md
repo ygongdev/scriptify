@@ -9,8 +9,6 @@ A Claude Code plugin that turns LLM instructions (skills, plugins, prompts) into
 | **audit** | `/scriptify:audit` | Scan a project for LLM instructions and report what can be scriptified, with token/time savings estimates |
 | **generate** | `/scriptify:generate` | Generate standalone scripts from audit items or natural-language instructions |
 | **verify** | `/scriptify:verify` | Verify generated scripts replicate the original LLM instruction behaviour |
-| **self_test** | `/scriptify:self_test` | End-to-end self-test of all scriptify skills |
-
 ## Usage
 
 ```bash
@@ -32,8 +30,8 @@ claude --plugin-dir /path/to/scriptify
 /scriptify:verify all
 /scriptify:verify scripts/foo.sh
 
-# Run self-test
-/scriptify:self_test
+# Run self-test (deterministic checks)
+./scripts/self_test.sh
 ```
 
 ## How it works
